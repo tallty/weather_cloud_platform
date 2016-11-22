@@ -1,0 +1,9 @@
+@value blue, red, green from '../colors.css';
+
+.color {
+	color: blue;
+}
+.size {
+	composes: color;
+	font-size: 18px;
+}
