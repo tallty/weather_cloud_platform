@@ -17,7 +17,7 @@ This repo is a boilerplate for React-Babel-Webpack project. You could use it as 
 First, you should clone the repo and install the dependencies.
 
 ```bash
-$ git clone git@github.com:ruanyf/react-babel-webpack-boilerplate.git <yourAppName>
+$ git clone git@github.com:iboying/react_scaffold.git <yourAppName>
 $ cd <yourAppName>
 $ npm install
 ```
