@@ -1,0 +1,42 @@
+.apis_container {
+	overflow: hidden;
+	height: -moz-calc(100vh - 50px);
+	height: -webkit-calc(100vh - 50px);
+	height: calc(100vh - 50px);
+	width: 100vw;
+}
+.apis {
+	width: -moz-calc(15% - 1px);
+	width: -webkit-calc(15% - 1px);
+	width: calc(15% - 1px);
+	height: 100%;
+	background: #FAFAFA;
+	float: left;
+	border-right: 1px solid #E6E6E6;
+}
+.api {
+	width: 85%;
+	height: 100%;
+	float: left;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.api_content {
+	width: 50%;
+	min-height: 100%;
+	float: left;
+	background: #ffffff;
+}
+.api_markdown {
+	width: 50%;
+	min-height: 100%;
+	float: left;
+	background: #2B303B;
+	color: #fff;
+}
+.content {
+	height: 100%;
+	padding: 15px;
+	word-break:break-all;
+	white-space:normal;
+}
