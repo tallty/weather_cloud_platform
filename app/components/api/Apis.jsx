@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Admin from '../layouts/Admin';
 import Api from './Api';
 import css from './api.css';
-import { markdown } from 'markdown';
 
 export default class Apis extends Component {
 	state = {

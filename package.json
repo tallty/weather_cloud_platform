@@ -34,7 +34,7 @@
     "babel-preset-stage-0": "6.x",
     "commitizen": "^2.5.0",
     "conventional-changelog-cli": "1.x",
-    "copy-webpack-plugin": "latest",
+    "copy-webpack-plugin": "^1.1.1",
     "css-loader": "~0.23.0",
     "cz-conventional-changelog": "^1.1.5",
     "eslint": "latest",
@@ -44,11 +44,12 @@
     "eslint-plugin-react": "latest",
     "ghooks": "^1.0.3",
     "open-browser-webpack-plugin": "0.0.2",
-    "style-loader": "~0.13.0",
     "postcss-loader": "^1.1.1",
     "postcss-modules-values": "^1.2.2",
+    "style-loader": "~0.13.0",
     "validate-commit-msg": "2.x",
-    "webpack": "latest",
+    "webpack": "~1.13.2",
+    "webpack-cli": "^3.3.6",
     "webpack-dev-server": "latest"
   },
   "keywords": [

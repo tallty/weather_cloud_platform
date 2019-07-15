@@ -1,7 +1,7 @@
-var webpack = require('webpack');
-var path = require('path');
-var OpenBrowserPlugin = require('open-browser-webpack-plugin');
-var values = require('postcss-modules-values');
+const webpack = require('webpack');
+const path = require('path');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const values = require('postcss-modules-values');
 
 module.exports = {
   devServer: {
@@ -18,22 +18,22 @@ module.exports = {
     path.resolve(__dirname, 'app/index.jsx')
   ],
   output: {
-    path: __dirname + '/build',
+    path: `${__dirname}/build`,
     publicPath: '/',
     filename: './bundle.js'
   },
   module: {
-    loaders:[
-      { 
-        test: /\.css$/, 
-        include: path.resolve(__dirname, 'app'), 
+    loaders: [
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'app'),
         loader: 'style-loader!css-loader?modules&localIdentName=[name]-[local]-[hash:base64:5]!postcss-loader'
       },
-      { 
-        test: /\.js[x]?$/, 
-        include: path.resolve(__dirname, 'app'), 
-        exclude: /node_modules/, 
-        loader: 'babel-loader' 
+      {
+        test: /\.js[x]?$/,
+        include: path.resolve(__dirname, 'app'),
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       },
     ]
   },

@@ -1,8 +1,10 @@
-var webpack = require('webpack');
-var path = require('path');
-var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var values = require('postcss-modules-values');
+const path = require('path');
+/* eslint-disable */
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const values = require('postcss-modules-values');
+
+const { UglifyJsPlugin } = webpack.optimize;
 
 module.exports = {
   devtool: 'cheap-source-map',
@@ -10,22 +12,22 @@ module.exports = {
     path.resolve(__dirname, 'app/index.jsx'),
   ],
   output: {
-    path: __dirname + '/build',
+    path: `${__dirname}/build`,
     publicPath: '/',
     filename: './bundle.js'
   },
   module: {
-    loaders:[
-      { 
-        test: /\.css$/, 
-        include: path.resolve(__dirname, 'app'), 
-        loader: 'style-loader!css-loader?modules&localIdentName=[local]-[hash:base64:5]!postcss-loader' 
+    loaders: [
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'app'),
+        loader: 'style-loader!css-loader?modules&localIdentName=[local]-[hash:base64:5]!postcss-loader'
       },
-      { 
-        test: /\.js[x]?$/, 
-        include: path.resolve(__dirname, 'app'), 
-        exclude: /node_modules/, 
-        loader: 'babel-loader' 
+      {
+        test: /\.js[x]?$/,
+        include: path.resolve(__dirname, 'app'),
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       },
     ]
   },
@@ -37,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
-    new uglifyJsPlugin({
+    new UglifyJsPlugin({
       compress: {
         warnings: false
       }
