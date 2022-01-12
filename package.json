@@ -18,7 +18,7 @@
   "dependencies": {
     "antd": "^2.5.2",
     "babel-runtime": "6.x",
-    "markdown-it": "^8.2.2",
+    "markdown-it": "^12.3.2",
     "react": "15.x",
     "react-dom": "15.x",
     "react-router": "^2.8.1",
